@@ -25,7 +25,9 @@ SECRET_KEY = 's3*sw0akkyryfq9z3=btfzt(+@761)om#-3&ilo1*n55_*te@1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+
+]
 
 
 # Application definition
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_nose',
     'rest_framework',
-    'task.apps.TaskConfig'
+    'task.apps.TaskConfig',
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
@@ -101,6 +104,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 
 # Internationalization
